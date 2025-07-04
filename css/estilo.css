@@ -1,0 +1,323 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: justify;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Fundo de estrelas animadas */
+.stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* não interfere em cliques */
+background: url('../img/stars.jpg') repeat;
+  background-size: cover;
+  animation: twinkling 1.5s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes twinkling {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Corpo da página */
+.stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/stars.jpg') repeat;
+  background-size: cover;
+  animation: twinkling 1.5s infinite alternate;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body {
+  background-color: #06050b;
+  color: #e5e6d5;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+
+/* Cabeçalho */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 2px solid #e3f125;
+  background: transparent;
+}
+
+.logo {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #e6e612;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #1e0e87;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+nav a:focus {
+  outline: none;
+  border: 2px solid #e3f125;
+}
+
+nav a:active {
+  transform: scale(0.95);
+}
+
+/* Caixa de texto estilizada */
+.text-box {
+  border: 2px solid #d8ef07;
+  padding: 35px 40px;
+  background-color: #1c1919;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: left;
+  color: #d8ef07;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  box-shadow: 0 0 15px #d8ef07aa;
+}
+
+/* Títulos */
+h1, h2 {
+  color: #e3f125;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 6px #e3f125aa;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+/* Parágrafos */
+p {
+  color: #e5e6d5;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text-box {
+    max-width: 90%;
+  }
+}
+.games-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Texto dos links (botões) com cor branca */
+/* Mantém o estilo original dos blocos */
+.game-item {
+  background-color: #1c1919;
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 0 12px #e3f125aa;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.game-item:hover {
+  box-shadow: 0 0 25px #e3f125ff;
+  transform: translateY(-5px);
+}
+
+/* Link do botão: texto branco */
+.game-item a {
+  text-decoration: none;
+  color: #fff; /* mudou pra branco */
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.game-item a:hover {
+  color: #e3f125;
+}
+
+/* Imagens com tamanho padrão e mantendo proporção */
+.game-item img {
+  width: 180px;      /* largura fixa */
+  height: 120px;     /* altura fixa */
+  object-fit: cover; /* mantém proporção e corta se necessário */
+  border-radius: 12px;
+  margin: 0 auto 10px auto;
+  display: block;
+  box-shadow: 0 0 10px #e3f125aa;
+  transition: box-shadow 0.3s ease;
+}
+
+.game-item img:hover {
+  box-shadow: 0 0 20px #e3f125ff;
+}
+img {
+  max-width: 600px; /* aumentei de 300px para 400px */
+  height: auto;
+  display: block;
+  margin: 40px auto 60px auto;
+  border-radius: 12px;
+  border: 2px solid #333;
+}
+.soldados {
+ position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+animation: haze 4s infinite alternate;
+z-index: -1;
+background: url('../img/soldados.jpg') no-repeat center center;
+background-size: cover;
+}
+
+@keyframes haze {
+  0% {
+    opacity: 0.8;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0.4;
+    filter: blur(2px);
+  }
+}
+.aventura {
+ position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+
+z-index: -1;
+background: url('../img/fundoaventura.jpg') no-repeat center center;
+background-size: cover;
+}
+
+.classicos {
+ position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+
+z-index: -1;
+background: url('../img/fundoclassico\ \(2\).jpg') no-repeat center center;
+background-size: cover;
+
+}
+.corrida {
+ position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+
+z-index: -1;
+background: url('../img/fundocorrida\ \(1\).jpg') no-repeat center center;
+background-size: cover;
+}
+
+.footer {
+    background-color: #000;
+    color: #e6e612;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 20px 30px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-top {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-top p {
+    margin: 0 0 15px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-bottom a {
+    display: inline-block;
+    color: #e6e612;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+
+
+.footer-links a:hover {
+    color: #fff; /* branco ao passar o mouse */
+}
